@@ -1,20 +1,19 @@
 public class NPSService {
-    public int nps(int[] votes){
+    public int nps(int[] votes) {
 
 
         int detractors = 0;
         int promoters = 0;
-        //int neutrals = 0;
+
 
         for (int vote : votes) {
-            if(vote<=6)detractors++;
-            if (vote>=9)promoters++;
-            //if(vote>6&&vote<9)neutrals++;
+            if (vote <= 6) detractors++;
+            if (vote >= 9) promoters++;
         }
 
         int abonents = votes.length;
 
-        double nps =  promoters*1.0/abonents*100 - detractors*1.0/abonents*100;
+        double nps = promoters * 1.0 / abonents * 100 - detractors * 1.0 / abonents * 100;
 
         return (int) nps;
     }
