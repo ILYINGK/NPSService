@@ -11,6 +11,7 @@ public class NPSService {
             if (vote >= 9) promoters++;
         }
 
+        //можно вбить в формулу, но так понятнее
         int abonents = votes.length;
 
         double nps = promoters * 1.0 / abonents * 100 - detractors * 1.0 / abonents * 100;
